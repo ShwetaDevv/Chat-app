@@ -1,3 +1,5 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+import Victory from "../../assets/victory.svg";
 const Auth = () => {
   return (
     <div className="h-[100vh] w-[100vw] flex items-center justify-center">
@@ -10,7 +12,19 @@ const Auth = () => {
           <div className="flex item-center justify-center flex-col">
             <div className="flex item-center justify-center">
               <h1 className="text-5xl font-bold md:text-6xl">Welcome</h1>
+              <img src={Victory} alt="Victory Emoji" className="h-[100px]" />
             </div>
+            <p className="font-medium text-center">Fill in the details to get strated with the best chat app!</p>
+          </div>
+          <div className="flex item-center justify-center">
+           <Tabs>
+            <TabsList>
+              <TabsTrigger value="login">Login</TabsTrigger>
+              <TabsTrigger value="signup">Signup</TabsTrigger>
+            </TabsList>
+            <TabsContent className="" value="login"></TabsContent>
+            <TabsContent className="" value="signup"></TabsContent>
+           </Tabs>
           </div>
         </div>
       </div>
